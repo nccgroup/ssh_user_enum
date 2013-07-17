@@ -1,17 +1,26 @@
 ssh_enum_v0.3.py
 Usage: ssh_enum_v0.3.py [options]
 
-Options:
-  -h, --help       Show this help message and exit
+<b>Options<b>:
+
+<pre>
+  -h, --help      Show this help message and exit
+  
   -u --userlist		Specify a new line delimited username file
-  -i --ip		Specify the target
+  
+  -i --ip         Specify the target
+  
   -m --multiplier	Specify the multiplier for the password (used to cause the delay)
+  
   -t --threshold	Adjust the threshold according to the multipler
-  -p --port		Specify a port if the SSH service is not running on port 22
+  
+  -p --port		    Specify a port if the SSH service is not running on port 22
+  
   -a --autotune		Calculate the optimum delay/threshold
+</pre>
 
 
-Tips
+<b>Tips<b>
 
 Running the script with just userlist and host arguments will use defaults. This will work but may not be optimal.
 
